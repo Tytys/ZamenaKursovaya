@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TabControl>
-            <TabItem Width="100" Header="расписание">
+            <TabItem Width="124" Header="расписание">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="174*"/>
@@ -16,10 +16,10 @@
                         <ColumnDefinition Width="155*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="4*"/>
-                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="34*"/>
+                        <RowDefinition Height="159*"/>
                     </Grid.RowDefinitions>
-                    <DataGrid ItemsSource="{Binding Schedule}" Name="dg" Grid.ColumnSpan="3" Margin="0,6,0,0" Grid.Row="1">
+                    <DataGrid ItemsSource="{Binding Schedule}" Name="dg" Grid.ColumnSpan="3" Margin="0,6,0,0" Grid.Row="1" AutoGenerateColumns="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Lesson 1" Binding="{Binding [0].Name}" Width="*"/>
                             <DataGridTextColumn Header="Lesson 2" Binding="{Binding [1].Name}" Width="*"/>
@@ -29,8 +29,8 @@
 
                     </DataGrid>
                     <Label Content="Введите имя группы"/>
-                    <TextBox Grid.Column="1" x:Name="GroupTb" Margin="10,10,10,10"/>
-                    <Button Grid.Column="2" Margin="10" Content="Показать" Click="Button_Click_1"/>
+                    <TextBox Grid.Column="1" x:Name="GroupTb" Margin="10,10,10,10" />
+                    <Button Grid.Column="2" Margin="10,21,10,15" Content="Показать" Click="Button_Click_1"/>
                 </Grid>
             </TabItem>
             <TabItem Width="100" Header="Замена">
@@ -53,14 +53,14 @@
                     </Grid.RowDefinitions>
                     <Button Height="58" Background="Blue"
                         Content="Заменить" Click="Button_Click"
-                            Grid.Row="6"/>
+                            Grid.Row="6" Grid.Column="1" Margin="10,24,10,24"/>
 
                     <TextBox x:Name="pairtb" Grid.Row="2" Margin="10" Grid.Column="1"/>
-                    <Label Grid.Row="2" Grid.Column="0" Margin="10" Content="Преподаватель"
-                           />
+                    <Label Grid.Row="2" Grid.Column="0" Margin="133,21,10,10" Content="Преподаватель"
+                           FontSize="15"/>
                     <TextBox x:Name="daytb" Grid.Row="4" Margin="10" Grid.Column="1"/>
-                    <Label Grid.Row="4" Grid.Column="0" Margin="10" Content="Заменяющий препод"
-                           />
+                    <Label Grid.Row="4" Grid.Column="0" Margin="112,19,10,10" Content="Заменяющая пара"
+                           FontSize="15"/>
                 </Grid>
             </TabItem>
         </TabControl>
