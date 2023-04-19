@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZamenaKursovaya"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Замена расписания" Height="600" Width="1000">
     <Grid>
         <TabControl>
-            <TabItem Width="124" Header="расписание">
+            <TabItem Width="124" Header="Расписание">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="174*"/>
@@ -19,18 +19,18 @@
                         <RowDefinition Height="34*"/>
                         <RowDefinition Height="159*"/>
                     </Grid.RowDefinitions>
-                    <DataGrid ItemsSource="{Binding Schedule}" Name="dg" Grid.ColumnSpan="3" Margin="0,6,0,0" Grid.Row="1" AutoGenerateColumns="False">
+                    <DataGrid ItemsSource="{Binding Schedule}" Name="dg" Grid.ColumnSpan="3"  Grid.Row="1" AutoGenerateColumns="False" >
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Lesson 1" Binding="{Binding [0].Name}" Width="*"/>
-                            <DataGridTextColumn Header="Lesson 2" Binding="{Binding [1].Name}" Width="*"/>
-                            <DataGridTextColumn Header="Lesson 3" Binding="{Binding [2].Name}" Width="*"/>
-                            <DataGridTextColumn Header="Lesson 4" Binding="{Binding [3].Name}" Width="*"/>
+                            <DataGridTextColumn Header="Первая пара" Binding="{Binding [0].Name}" Width="*"/>
+                            <DataGridTextColumn Header="Вторая пара" Binding="{Binding [1].Name}" Width="*"/>
+                            <DataGridTextColumn Header="Третья пара" Binding="{Binding [2].Name}" Width="*"/>
+                            <DataGridTextColumn Header="Четвертая пара" Binding="{Binding [3].Name}" Width="*"/>
                         </DataGrid.Columns>
 
                     </DataGrid>
-                    <Label Content="Введите имя группы"/>
-                    <TextBox Grid.Column="1" x:Name="GroupTb" Margin="10,10,10,10" />
-                    <Button Grid.Column="2" Margin="10,21,10,15" Content="Показать" Click="Button_Click_1"/>
+                    <Label Content="Введите имя группы" Style="{StaticResource HeadingLabel}" Margin="10,10,10,10" FontSize="14"/>
+                    <TextBox Grid.Column="1" x:Name="GroupTb" Margin="10,10,10,10" FontSize="16"/>
+                    <Button Grid.Column="2" Margin="10,10,10,10" Content="Показать" Click="Button_Click_1"/>
                 </Grid>
             </TabItem>
             <TabItem Width="100" Header="Замена">
